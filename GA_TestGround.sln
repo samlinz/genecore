@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA_TestGround", "GA_TestGround\GA_TestGround.csproj", "{33D989CA-0D27-4D3A-B03C-CB6E94D504D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneCore", "GeneCore\GeneCore.csproj", "{36771172-B185-485B-97DC-4C32A0938AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{4BF25F07-F607-4741-AC9F-5C439312F46A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33D989CA-0D27-4D3A-B03C-CB6E94D504D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D989CA-0D27-4D3A-B03C-CB6E94D504D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D989CA-0D27-4D3A-B03C-CB6E94D504D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D989CA-0D27-4D3A-B03C-CB6E94D504D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36771172-B185-485B-97DC-4C32A0938AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36771172-B185-485B-97DC-4C32A0938AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36771172-B185-485B-97DC-4C32A0938AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36771172-B185-485B-97DC-4C32A0938AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF25F07-F607-4741-AC9F-5C439312F46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF25F07-F607-4741-AC9F-5C439312F46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF25F07-F607-4741-AC9F-5C439312F46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF25F07-F607-4741-AC9F-5C439312F46A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
