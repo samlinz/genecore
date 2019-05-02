@@ -57,5 +57,6 @@ namespace GeneCore.Core {
     public enum LogLevels {
         Nothing = 0x00,
         DebugInformation = 0x01 << 1,
+        FitnessValues = 0x01 << 1,
     }
 }

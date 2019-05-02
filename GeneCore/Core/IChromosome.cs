@@ -21,7 +21,7 @@ namespace GeneCore.Core {
         private readonly T[] _genome;
         [NotNull]
         private readonly ReaderWriterLockSlim _genomeLock = new ReaderWriterLockSlim(
-            LockRecursionPolicy.SupportsRecursion); 
+            LockRecursionPolicy.NoRecursion); 
 
         protected AbstractChromosome(Int32 genomeLength) {
             _genome = new T[genomeLength];

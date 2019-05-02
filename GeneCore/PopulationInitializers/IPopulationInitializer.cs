@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using GeneCore.Core;
 
 namespace GeneCore.PopulationInitializers {
@@ -9,6 +10,6 @@ namespace GeneCore.PopulationInitializers {
     /// outperform random initialization. The best thing to do is to maximize diversity.
     /// </summary>
     public interface IPopulationInitializer<T> where T : IIndividual {
-        IPopulation<T> InitializePopulation();
+        Task<IPopulation<T>> InitializePopulation();
     }
 }
