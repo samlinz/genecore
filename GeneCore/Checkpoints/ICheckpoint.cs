@@ -1,4 +1,4 @@
-using GeneCore.Core;
+/*using GeneCore.Core;
 
 namespace GeneCore.Checkpoints {
     /// <summary>
@@ -6,11 +6,12 @@ namespace GeneCore.Checkpoints {
     /// Can do anything really, for example serialize the search to disk.
     /// </summary>
     public interface ICheckpoint {
-        void RunCheck<TFitness, TIndividual>(GeneticSelectionProcess<TFitness, TIndividual> process
-            , IProcessInformation processInformation) where TIndividual : IIndividual;
+        void RunCheck<TFitness, TIndividual>(GeneticSelectionProcess<TFitness, TIndividual process
+            , IProcessInformation processInformation) where TIndividual : IIndividual<TGene>;
     }
 
     // TODO
     /*public class SaveProcessToDisk : ICheckpoint {
-    }*/
-}
+    }#1#
+}*/
+

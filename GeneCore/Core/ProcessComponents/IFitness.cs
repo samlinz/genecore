@@ -1,7 +1,7 @@
 using System;
 using JetBrains.Annotations;
 
-namespace GeneCore.Core {
+namespace GeneCore.Core.ProcessComponents {
     public interface IFitness<T> : IComparable<IFitness<T>> {
         T GetFitness();
         Double GetFitnessDouble();

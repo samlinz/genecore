@@ -38,8 +38,16 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Examples\IExampleSelectionProcess.cs" />
+        <Compile Include="Examples\MaximizeOnesInBinaryStringExample.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\GeneCore\GeneCore.csproj">
+        <Project>{36771172-b185-485b-97dc-4c32a0938ab4}</Project>
+        <Name>GeneCore</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
