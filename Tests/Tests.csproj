@@ -20,8 +20,4 @@
       <ProjectReference Include="..\GeneCore\GeneCore.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="TestRuns" />
-    </ItemGroup>
-
 </Project>

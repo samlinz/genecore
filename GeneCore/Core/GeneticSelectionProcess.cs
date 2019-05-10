@@ -224,6 +224,13 @@ namespace GeneCore.Core
             _processInformationHistory.Add(processInformation);
         }
 
+        public IList<TProcessInformation> GetHistory()
+        {
+            if (_isRunning) throw new InvalidOperationException("Cannot access history while process is running");
+
+            return _processInformationHistory;
+        }
+
         /// <summary>
         ///     Run the process until at least one termination condition is set.
         /// </summary>

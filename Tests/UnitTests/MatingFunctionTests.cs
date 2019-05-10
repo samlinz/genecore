@@ -22,11 +22,7 @@ namespace Tests.UnitTests
             matingFunction.SetChromosomeLength(chromosomeSize);
 
             TestIndividual<Int32>[] parents = TestUtils.GetRandomTestIndividuals(parentCount, chromosomeSize);
-            List<IndividualWithFitness<TestIndividual<Int32>, Int32>> parentsWithFitnesses = parents
-                .Select(testIndividual => new IndividualWithFitness<TestIndividual<Int32>, Int32>(testIndividual, 1))
-                .ToList();
-
-            TestIndividual<Int32> individual = matingFunction.Mate(parentsWithFitnesses);
+            TestIndividual<Int32> individual = matingFunction.Mate(parents);
 
             Assert.Equal(chromosomeSize, individual.GetChromosome().GetGenome().Length);
         }
