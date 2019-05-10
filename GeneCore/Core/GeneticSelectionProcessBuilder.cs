@@ -33,6 +33,7 @@ namespace GeneCore.Core
                             new List<ITerminationCondition<TPopulation, TIndividual, TGene, TProcessInformation>>()
                         , _populationModifiers = new List<IPopulationModifier<TPopulation, TIndividual, TGene>>()
                         , _loggers = new List<ILogger>()
+                        , _processInformationHistory = new List<TProcessInformation>()
                     };
             }
 

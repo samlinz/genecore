@@ -88,6 +88,7 @@ namespace GeneCore.Core
         ///     Initialize the process, by creating the initial population using the configured provider.
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>
+        // ReSharper disable always PossibleNullReferenceException
         public void Initialize()
         {
             #region Validation
@@ -101,7 +102,6 @@ namespace GeneCore.Core
             #endregion
 
             LogInfo("Initializing population");
-            // ReSharper disable once PossibleNullReferenceException
             _population = _populationInitializer.InitializePopulation(_initialPopulationSize.Value);
 
             LogInfo("Initializing calculating initial fitnesses");
@@ -112,6 +112,7 @@ namespace GeneCore.Core
         ///     Run a single generation of the process.
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>
+        // ReSharper disable always PossibleNullReferenceException
         public void RunGeneration()
         {
             #region Validation
@@ -137,8 +138,7 @@ namespace GeneCore.Core
             // Select parents to produce new generation of offspring.
             LogDebug("Selecting parents");
             
-            IList<IEnumerable<TIndividual>> parentGroups = _parentSelector?.GetParents(_population)?.ToList();
-            if (parentGroups == null) throw new InvalidOperationException($"{nameof(parentGroups)} was null");
+            IList<IEnumerable<TIndividual>> parentGroups = _parentSelector.GetParents(_population).ToList();
             
             // Log parents and their fitness.
             Int32 parentGroupCount = 0;
@@ -193,7 +193,7 @@ namespace GeneCore.Core
             TProcessInformation currentGenerationProcessInformation =
                 _processInformationComposer.ComposeProcessInformation(_previousProcessInformation, _population);
 
-            _processInformationHistory.Add(currentGenerationProcessInformation);
+            AddToHistory(currentGenerationProcessInformation);            
 
             LogInfo($"G{generationCount} TF {currentGenerationProcessInformation.GetTotalFitness()}");
 
@@ -212,6 +212,16 @@ namespace GeneCore.Core
             _previousProcessInformation = currentGenerationProcessInformation;
 
             if (!_isRunningLocked) _isRunning = false;
+        }
+
+        private void AddToHistory(TProcessInformation processInformation)
+        {
+            while (_processInformationHistory.Count > MaxHistoryLength)
+            {
+                _processInformationHistory.RemoveAt(0);
+            }
+
+            _processInformationHistory.Add(processInformation);
         }
 
         /// <summary>
